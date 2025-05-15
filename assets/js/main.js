@@ -6,6 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
 (function() {
   "use strict";
 
@@ -160,6 +161,55 @@
 
   });
 
+    //🔽🔽🔽 Aquí va tu JS de filtros personalizados 🔽🔽🔽 
+
+  const isoContainer = document.querySelector('.isotope-container');
+  if (isoContainer) {
+    const iso = new Isotope(isoContainer, {
+      itemSelector: '.isotope-item',
+      layoutMode: 'masonry',
+    });
+
+    const categoryFilter = document.getElementById('filter-category');
+    const colorFilter = document.getElementById('filter-color');
+    const priceRange = document.getElementById('price-range');
+    const priceValue = document.getElementById('price-value');
+    const applyFiltersBtn = document.getElementById('apply-filters');
+    const resetFiltersBtn = document.getElementById('reset-filters');
+
+    function applyFilters() {
+      const category = categoryFilter.value;
+      const color = colorFilter.value;
+      const price = parseInt(priceRange.value);
+
+      const filterFn = function(itemElem) {
+        const categoryMatch = category === '*' || itemElem.classList.contains(category.replace('.', ''));
+        const colorMatch = color === '*' || itemElem.classList.contains(color);
+        const itemPrice = parseInt(itemElem.getAttribute('data-price')) || 0;
+        const priceMatch = itemPrice <= price;
+        return categoryMatch && colorMatch && priceMatch;
+      };
+
+      iso.arrange({ filter: filterFn });
+    }
+
+    function resetFilters() {
+      categoryFilter.value = '*';
+      colorFilter.value = '*';
+      priceRange.value = priceRange.max;
+      priceValue.textContent = `$${priceRange.max}`;
+      iso.arrange({ filter: '*' });
+    }
+
+    applyFiltersBtn.addEventListener('click', applyFilters);
+    resetFiltersBtn.addEventListener('click', resetFilters);
+
+    priceRange.addEventListener('input', () => {
+      priceValue.textContent = `$${priceRange.value}`;
+    });
+  }
+
+
   /**
    * Init swiper sliders
    */
@@ -216,6 +266,7 @@
       }
     })
   }
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 

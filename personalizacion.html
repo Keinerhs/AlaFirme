@@ -72,38 +72,83 @@
       </div>
     </div>
 
-    <!-- Cuidados Section -->
-    <section id="cuidados" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Cuidados Básicos</h2>
-        <p>Sigue estos pasos para mantener tu gorra Ala Firme como nueva.</p>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
-      <div class="container">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Personalización</h2>
+        <p>Si deseas una asesoria mas real puedes contactarnos por los siguientes medios</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
         <div class="row gy-4">
 
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/cuidados.jpg" class="img-fluid" alt="Cuidados de tu gorra">
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Direccion</h3>
+                <p>Calle 10 # 35 - 25 Barrio Jose Antonio Galan</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3> WhatsApp</h3>
+                <p>+57 318925 3168 </p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Instagram</h3>
+                <p>alafirme_</p>
+              </div>
+            </div><!-- End Info Item -->
+
           </div>
 
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Mantenimiento de tu gorra personalizada</h3>
-            <p class="fst-italic">
-              Las gorras personalizadas requieren un cuidado especial para preservar su forma, color y diseño.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Lava a mano con agua fría y detergente suave.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>No uses lavadora ni secadora.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Seca al aire libre y evita la luz solar directa para prevenir la decoloración.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Guárdala en un lugar seco y fresco, evitando que se deforme.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Evita el contacto con productos químicos o alcohol.</span></li>
-            </ul>
-          
-          </div>
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
 
         </div>
+
       </div>
-    </section>
+
+    </section><!-- /Contact Section -->
 
   </main>
 
