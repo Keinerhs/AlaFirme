@@ -271,3 +271,43 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+// Mostrar valor actual del rango de precio
+    const priceRange = document.getElementById('priceRange');
+    const priceValue = document.getElementById('priceValue');
+    priceRange.addEventListener('input', () => {
+      priceValue.textContent = `$${priceRange.value}`;
+    });
+
+    // Mostrar / ocultar filtros
+    const toggleButton = document.getElementById('toggle-filters');
+    const filterSidebar = document.getElementById('filterSidebar');
+
+    toggleButton.addEventListener('click', () => {
+      filterSidebar.classList.toggle('hidden');
+      toggleButton.textContent = filterSidebar.classList.contains('hidden') ? 'Mostrar filtros' : 'Ocultar filtros';
+    });
+
+    const form = document.querySelector('.php-email-form');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    if (data.status === "ok") {
+      alert("Solicitud enviada correctamente.");
+    } else {
+      alert("Error: " + data.message);
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Fallo al enviar la solicitud.");
+  }
+});
+
+
+

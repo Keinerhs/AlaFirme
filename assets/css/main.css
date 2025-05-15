@@ -15,8 +15,8 @@
 
     .whatsapp-float {
       position: fixed;
-      bottom: 20px;       /* Distancia desde abajo */
-      right: 20px;        /* Distancia desde la derecha */
+      bottom: 70px;       /* Distancia desde abajo */
+      right: 30px;        /* Distancia desde la derecha */
       background-color: #25D366;
       color: white;
       border-radius: 50%;
@@ -260,20 +260,20 @@ h6 {
   }
 
   .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
+  left: 0; /* ✅ Alineado directamente bajo el botón */
+  top: 100%; /* ✅ Justo debajo del ítem de menú */
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 0;
+  padding: 10px 0;
+  background: var(--nav-dropdown-background-color);
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 9999; /* ✅ Asegura que esté sobre otros elementos */
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
 
   .navmenu .dropdown ul li {
     min-width: 200px;
@@ -297,10 +297,11 @@ h6 {
   }
 
   .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
+  opacity: 1;
+  top: 100%; /* ✅ Igual que en la definición base */
+  visibility: visible;
   }
+
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
@@ -313,6 +314,11 @@ h6 {
     top: 0;
     left: -100%;
     visibility: visible;
+  }
+
+    .navmenu li a i {
+    margin-right: 3px;
+    font-size: 18px;
   }
 }
 
@@ -503,6 +509,11 @@ h6 {
   margin-top: 5px;
   font-size: 13px;
 }
+
+.footer .section-title h2 {
+  color: white;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -954,13 +965,14 @@ section,
   color: #f28484;
 }
 
-/*--------------------------------------------------------------
-# Call To Action Section
+/*-------------------------------------------------------------- 
+# Call To Action Section - Actualizado con layout centrado + sidebar
 --------------------------------------------------------------*/
 .call-to-action {
   padding: 120px 0;
-  position: relative;
+  position: relative; /* Necesario para el posicionamiento absoluto del sidebar */
   clip-path: inset(0);
+  overflow: visible;
 }
 
 .call-to-action img {
@@ -987,34 +999,115 @@ section,
   z-index: 3;
 }
 
-.call-to-action h3 {
+/* Nuevo layout: centro + sidebar */
+.cta-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Texto centrado */
+.cta-text {
+  flex: 1 1 60%;
+  text-align: center;
+}
+
+.cta-text h3 {
   color: var(--default-color);
   font-size: 28px;
   font-weight: 700;
 }
 
-.call-to-action p {
+.cta-text p {
   color: var(--default-color);
 }
 
-.call-to-action .cta-btn {
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid var(--contrast-color);
-  color: var(--contrast-color);
+/* Sidebar de filtros */
+.catalog-filters {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  z-index: 3;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
-.call-to-action .cta-btn:hover {
-  background: var(--accent-color);
-  border: 2px solid var(--accent-color);
+.catalog-filters h4,
+.catalog-filters label {
+  color: #fff;
+  font-weight: bold;
 }
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.catalog-filters select,
+.catalog-filters input[type="range"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 15px;
+}
+
+/* Botones */
+#apply-filters,
+#reset-filters {
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#apply-filters {
+  background-color: var(--accent-color);
+}
+
+#reset-filters {
+  background-color: #666;
+}
+
+#apply-filters:hover,
+#reset-filters:hover {
+  opacity: 0.85;
+}
+
+/* Ocultar filtros inicialmente */
+.hidden {
+  display: none;
+}
+
+/* Responsive: móviles */
+@media (max-width: 768px) {
+  .cta-content-wrapper {
+    flex-direction: column;
+  }
+
+  .catalog-filters {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -1326,23 +1419,31 @@ section,
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
+  color: var(--default-color); /* Color uniforme del texto */
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  font-family: inherit;
 }
 
+/* Estilo cuando están enfocados */
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
+/* Placeholder uniforme */
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.contact .php-email-form textarea::placeholder,
+.php-email-form input::placeholder,
+.php-email-form select::placeholder,
+.php-email-form textarea::placeholder {
+  color: var(--default-color); /* o un color fijo como #333 */
+  opacity: 1; /* Visibilidad total */
 }
 
+/* Botón de envío */
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);

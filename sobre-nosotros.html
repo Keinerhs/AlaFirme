@@ -49,18 +49,18 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#portfolio">Cátalogo</a></li>
-          <li><a href="#test">Test</a></li>
-          <li><a href="#call-to-action">Busqueda</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#portfolio">Catálogo</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
           <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-              <li><a href="#cuidados">Cuidados de tu Gorra</a></li>
-              <li><a href="#personalizacion">Personalizacíon</a></li>
-              <li><a href="#contact">Contactos</a></li>
+              <li><a href="cuidados.html">Cuidados de tu Gorra</a></li>
+              <li><a href="#contact">Soporte</a></li>
             </ul>
           </li>
+          <li><a href="/login.html"><i class="bi bi-person"></i> Login</a></li>
+          <li><a href="/carrito.html"><i class="bi bi-cart"></i> Carrito</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -74,10 +74,10 @@
     <div class="page-title dark-background">
       <div class="container position-relative">
         <h1>Sobre Nosotros</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <p>Conoce más sobre ALA FIRME, nuestra misión, visión y el compromiso que nos distingue.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li class="current">Sobre Nosotros</li>
           </ol>
         </nav>
@@ -86,33 +86,43 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+        <h2>Sobre ALA FIRME</h2>
+        <p>Comprometidos con la excelencia, la personalización y la confianza.</p>
+      </div>
 
       <div class="container">
-
         <div class="row gy-4">
 
+          <!-- Imagen -->
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="Imagen ALA FIRME">
           </div>
 
+          <!-- Contenido -->
           <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3>🧭 MISIÓN</h3>
+            <p>
+              En <strong>ALA FIRME</strong>, nuestra misión es brindar a cada cliente una experiencia de compra excepcional, ofreciendo productos exclusivos de alta calidad y un servicio personalizado, accesible y confiable.
+              Nos comprometemos a acompañar al cliente en todo el proceso, guiándolo con atención humana, responsabilidad y pasión por lo que hacemos.
             </p>
+
+            <h3>🌟 VISIÓN</h3>
+            <p>
+              Ser una empresa líder en el mercado nacional e internacional, reconocida por nuestra innovación, excelencia en atención al cliente y por promover una cultura de confianza y compromiso.
+              Queremos ser la primera opción para quienes buscan productos únicos y una experiencia de compra diferente, cercana y eficiente.
+            </p>
+
+            <h3>✨ Sobre ALA FIRME</h3>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Nos especializamos en vender gorras de alta calidad.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Atención humana, cercana y guiada en cada etapa del proceso.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Somos una marca con pasión por la originalidad, el detalle y la autenticidad.</span></li>
             </ul>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+            <a href="index.html#portfolio" class="read-more">
+              <span>Explora nuestro catálogo</span><i class="bi bi-arrow-right"></i>
+            </a>
           </div>
 
         </div>
@@ -123,68 +133,65 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
 
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p></p>
-          </div>
+<footer id="contact" class="footer dark-background">
 
+  <!-- TÍTULO DENTRO DEL FOOTER -->
+  <div class="container section-title text-white pt-4" data-aos="fade-up">
+    <h2 class="text-white">Soporte</h2>
+  </div>
+
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-geo-alt icon"></i>
+        <div class="address">
+          <h4>Ubicación</h4>
+          <p>Calle 10 # 35 - 25 Barrio Jose Antonio Galán</p>
+          <p>Aguachica - Cesar</p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
-            </p>
-          </div>
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-telephone icon"></i>
+        <div>
+          <h4>Contáctanos</h4>
+          <p>
+            <strong>Teléfono:</strong> <span>+57 318925 3168 </span><br>
+            <strong>Email:</strong> <span>alafirme@gmail.com</span><br>
+          </p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
-              <strong>Sunday</strong>: <span>Closed</span>
-            </p>
-          </div>
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-clock icon"></i>
+        <div>
+          <h4>Horario de Atención</h4>
+          <p>
+            <strong>Lunes-Sábado:</strong> <span>09AM - 21PM</span><br>
+            <strong>Domingo:</strong> <span>09AM - 13PM</span>
+          </p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
+      <div class="col-lg-3 col-md-6">
+        <h4>Síguenos</h4>
+        <div class="social-links d-flex">
+          <a href="https://www.facebook.com/share/15n8e4fMhp/" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/alafirme_?igsh=OW4zNWs0OTRoaDl0" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
-
       </div>
     </div>
+  </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Imperial</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Ala Firme</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
+  </div>
 
-  </footer>
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

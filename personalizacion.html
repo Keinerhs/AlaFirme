@@ -26,6 +26,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body class="service-details-page">
@@ -39,17 +42,17 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#portfolio">Cátalogo</a></li>
-          <li><a href="#test">Test</a></li>
-          <li><a href="#call-to-action">Busqueda</a></li>
+          <li><a href="index.html#portfolio">Catálogo</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
           <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
               <li><a href="cuidados.html">Cuidados de tu Gorra</a></li>
-              <li><a href="personalizacion.html">Personalización</a></li>
-              <li><a href="#contact">Contactos</a></li>
+              <li><a href="#contact">Soporte</a></li>
             </ul>
           </li>
+          <li><a href="/login.html"><i class="bi bi-person"></i> Login</a></li>
+          <li><a href="/carrito.html"><i class="bi bi-cart"></i> Carrito</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -72,133 +75,155 @@
       </div>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+
+    <!-- Personalization Section -->
+    <section id="personalizacion" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Personalización</h2>
-        <p>Si deseas una asesoria mas real puedes contactarnos por los siguientes medios</p>
-      </div><!-- End Section Title -->
+        <h2>Formulario de Personalización</h2>
+        <p>Completa los detalles de tu diseño personalizado y nos pondremos en contacto contigo.</p>
+      </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
-
         <div class="row gy-4">
 
+          <!-- Contact Info -->
           <div class="col-lg-4">
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Direccion</h3>
-                <p>Calle 10 # 35 - 25 Barrio Jose Antonio Galan</p>
+                <h3>Dirección</h3>
+                <p>Calle 10 # 35 - 25 Barrio Jose Antonio Galán</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
+              <i class="bi bi-whatsapp flex-shrink-0"></i>
               <div>
-                <h3> WhatsApp</h3>
-                <p>+57 318925 3168 </p>
+                <h3>WhatsApp</h3>
+                <p>+57 318 925 3168</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
+              <i class="bi bi-instagram flex-shrink-0"></i>
               <div>
                 <h3>Instagram</h3>
-                <p>alafirme_</p>
+                <p>@alafirme_</p>
               </div>
-            </div><!-- End Info Item -->
-
+            </div>
           </div>
 
+          <!-- Customization Form -->
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/personalizacion.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="nombre" class="form-control" placeholder="Tu Nombre" required>
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <input type="email" name="correo" class="form-control" placeholder="Tu Correo Electrónico" required>
+                </div>
+
+                <div class="col-md-6">
+                  <input type="tel" name="telefono" class="form-control" placeholder="Tu Número de Contacto (opcional)">
+                </div>
+
+                <div class="col-md-6">
+                  <select name="tipoGorra" class="form-control" required>
+                    <option value="" disabled selected>Tipo de gorra</option>
+                    <option value="snapback">Beisboleras con Malla</option>
+                    <option value="trucker">Beisboleras Exclusivas</option>
+                    <option value="curva">Europeas</option>
+                    <option value="plana">Agropecuarias</option>
+                    <option value="otra">Otra</option>
+                  </select>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea name="personalizacion" class="form-control" rows="6" placeholder="Describe cómo te gustaría que fuera tu gorra: colores, texto, imagen, ubicación del diseño, etc." required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Enviando...</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">¡Gracias! Tu solicitud ha sido enviada correctamente.</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Enviar Solicitud</button>
                 </div>
 
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div><!-- End Formulario -->
 
         </div>
-
       </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /Personalization Section -->
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Dirección</h4>
-            <p>A108 Adam Street<br>New York, NY 535022</p>
-          </div>
-        </div>
+  <footer id="contact" class="footer dark-background">
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contacto</h4>
-            <p><strong>Tel:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com</p>
-          </div>
-        </div>
+  <!-- TÍTULO DENTRO DEL FOOTER -->
+  <div class="container section-title text-white pt-4" data-aos="fade-up">
+    <h2 class="text-white">Soporte</h2>
+  </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Horario</h4>
-            <p><strong>Lun-Sáb:</strong> 11AM - 23PM<br><strong>Domingo:</strong> Cerrado</p>
-          </div>
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-geo-alt icon"></i>
+        <div class="address">
+          <h4>Ubicación</h4>
+          <p>Calle 10 # 35 - 25 Barrio Jose Antonio Galán</p>
+          <p>Aguachica - Cesar</p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6">
-          <h4>Síguenos</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-telephone icon"></i>
+        <div>
+          <h4>Contáctanos</h4>
+          <p>
+            <strong>Teléfono:</strong> <span>+57 318925 3168 </span><br>
+            <strong>Email:</strong> <span>alafirme@gmail.com</span><br>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-clock icon"></i>
+        <div>
+          <h4>Horario de Atención</h4>
+          <p>
+            <strong>Lunes-Sábado:</strong> <span>09AM - 21PM</span><br>
+            <strong>Domingo:</strong> <span>09AM - 13PM</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h4>Síguenos</h4>
+        <div class="social-links d-flex">
+          <a href="https://www.facebook.com/share/15n8e4fMhp/" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/alafirme_?igsh=OW4zNWs0OTRoaDl0" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ala Firme</strong> <span>Todos los derechos reservados</span></p>
-      <div class="credits">
-        Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Ala Firme</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-  </footer>
+  </div>
+
+</footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>

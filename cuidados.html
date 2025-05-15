@@ -26,6 +26,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body class="service-details-page">
@@ -39,17 +42,17 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#portfolio">Cátalogo</a></li>
-          <li><a href="#test">Test</a></li>
-          <li><a href="#call-to-action">Busqueda</a></li>
+          <li><a href="index.html#portfolio">Catálogo</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
           <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
               <li><a href="cuidados.html">Cuidados de tu Gorra</a></li>
-              <li><a href="#personalizacion">Personalización</a></li>
-              <li><a href="#contact">Contactos</a></li>
+              <li><a href="#contact">Soporte</a></li>
             </ul>
           </li>
+          <li><a href="/login.html"><i class="bi bi-person"></i> Login</a></li>
+          <li><a href="/carrito.html"><i class="bi bi-cart"></i> Carrito</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -72,88 +75,122 @@
       </div>
     </div>
 
-    <!-- Cuidados Section -->
-    <section id="cuidados" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Cuidados Básicos</h2>
-        <p>Sigue estos pasos para mantener tu gorra Ala Firme como nueva.</p>
-      </div>
+<!-- Cuidados Section -->
+<section id="cuidados" class="about section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Cuidados Básicos</h2>
+    <p>Sigue estos pasos para mantener tu gorra Ala Firme como nueva.</p>
+  </div>
 
-      <div class="container">
-        <div class="row gy-4">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
 
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/cuidados.jpg" class="img-fluid" alt="Cuidados de tu gorra">
+      <!-- Carrusel de imágenes -->
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+        <div id="carruselCuidados" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+              <img src="assets/img/cuidados/cuidados-2.png" class="d-block w-100" alt="Paso 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/cuidados/cuidados-1.png" class="d-block w-100" alt="Paso 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/cuidados/cuidados-3.png" class="d-block w-100" alt="Paso 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/cuidados/cuidados-4.png" class="d-block w-100" alt="Paso 4">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/cuidados/cuidados-5.png" class="d-block w-100" alt="Paso 5">
+            </div>
           </div>
-
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Mantenimiento de tu gorra personalizada</h3>
-            <p class="fst-italic">
-              Las gorras personalizadas requieren un cuidado especial para preservar su forma, color y diseño.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Lava a mano con agua fría y detergente suave.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>No uses lavadora ni secadora.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Seca al aire libre y evita la luz solar directa para prevenir la decoloración.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Guárdala en un lugar seco y fresco, evitando que se deforme.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Evita el contacto con productos químicos o alcohol.</span></li>
-            </ul>
-          
-          </div>
-
+          <!-- Botones de control -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselCuidados" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselCuidados" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </div>
-    </section>
 
-  </main>
+      <!-- Texto complementario -->
+      <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+        <h3>Mantenimiento de tus gorras Ala Firme</h3>
+        <p class="fst-italic">
+          Las siguientes imágenes muestran los pasos correctos para lavar, secar, guardar y proteger tus gorras.
+        </p>
+        <p>
+          Sigue visualmente cada recomendación para preservar tu gorra Ala Firme como el primer día.
+        </p>
+      </div>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Dirección</h4>
-            <p>A108 Adam Street<br>New York, NY 535022</p>
-          </div>
+    </div>
+  </div>
+</section>
+
+
+<footer id="contact" class="footer dark-background">
+
+  <!-- TÍTULO DENTRO DEL FOOTER -->
+  <div class="container section-title text-white pt-4" data-aos="fade-up">
+    <h2 class="text-white">Soporte</h2>
+  </div>
+
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-geo-alt icon"></i>
+        <div class="address">
+          <h4>Ubicación</h4>
+          <p>Calle 10 # 35 - 25 Barrio Jose Antonio Galán</p>
+          <p>Aguachica - Cesar</p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contacto</h4>
-            <p><strong>Tel:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com</p>
-          </div>
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-telephone icon"></i>
+        <div>
+          <h4>Contáctanos</h4>
+          <p>
+            <strong>Teléfono:</strong> <span>+57 318925 3168 </span><br>
+            <strong>Email:</strong> <span>alafirme@gmail.com</span><br>
+          </p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Horario</h4>
-            <p><strong>Lun-Sáb:</strong> 11AM - 23PM<br><strong>Domingo:</strong> Cerrado</p>
-          </div>
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-clock icon"></i>
+        <div>
+          <h4>Horario de Atención</h4>
+          <p>
+            <strong>Lunes-Sábado:</strong> <span>09AM - 21PM</span><br>
+            <strong>Domingo:</strong> <span>09AM - 13PM</span>
+          </p>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6">
-          <h4>Síguenos</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
+      <div class="col-lg-3 col-md-6">
+        <h4>Síguenos</h4>
+        <div class="social-links d-flex">
+          <a href="https://www.facebook.com/share/15n8e4fMhp/" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/alafirme_?igsh=OW4zNWs0OTRoaDl0" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ala Firme</strong> <span>Todos los derechos reservados</span></p>
-      <div class="credits">
-        Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Ala Firme</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-  </footer>
+  </div>
+
+</footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
